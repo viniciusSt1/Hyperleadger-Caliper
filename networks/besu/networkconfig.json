@@ -1,0 +1,195 @@
+{
+    "caliper": {
+        "blockchain": "ethereum",
+        "command": {}
+    },
+    "ethereum": {
+        "url": "ws://127.0.0.1:8646",
+        "fromAddress": "0x7a5583095f747317be8a48d9a944aa0a9508f1d2",
+        "fromAddressPrivateKey": "0x17d03fd2be867379ac6cfa30d1d9fb4662fe52bc833f7bc49c24400ffe2ea6a8",
+        "toAddress": "0x8a185f1380b8d681c394c15b2d26e9420d4bc05b",
+        "transactionConfirmationBlocks": 1,
+        "contracts": {
+            "NodeHealthMonitor": {
+                "address": "0xFbdE8b3Bc96779503fDeC133f011e2354641F3c6",
+                "estimateGas": true,
+                "gas": {
+                    "reportStatus": 1000000000,
+                    "statusReports": 1000000000,
+                    "getLatestStatus": 1000000000
+                },
+                "abi": [
+                    {
+                        "anonymous": false,
+                        "inputs": [
+                            {
+                                "indexed": true,
+                                "internalType": "address",
+                                "name": "node",
+                                "type": "address"
+                            },
+                            {
+                                "indexed": false,
+                                "internalType": "string",
+                                "name": "details",
+                                "type": "string"
+                            },
+                            {
+                                "indexed": false,
+                                "internalType": "uint256",
+                                "name": "timestamp",
+                                "type": "uint256"
+                            }
+                        ],
+                        "name": "CriticalAlert",
+                        "type": "event"
+                    },
+                    {
+                        "anonymous": false,
+                        "inputs": [
+                            {
+                                "indexed": true,
+                                "internalType": "address",
+                                "name": "node",
+                                "type": "address"
+                            },
+                            {
+                                "indexed": false,
+                                "internalType": "uint8",
+                                "name": "severity",
+                                "type": "uint8"
+                            },
+                            {
+                                "indexed": false,
+                                "internalType": "bytes32",
+                                "name": "statusHash",
+                                "type": "bytes32"
+                            },
+                            {
+                                "indexed": false,
+                                "internalType": "uint256",
+                                "name": "timestamp",
+                                "type": "uint256"
+                            }
+                        ],
+                        "name": "StatusReported",
+                        "type": "event"
+                    },
+                    {
+                        "inputs": [
+                            {
+                                "internalType": "address",
+                                "name": "node",
+                                "type": "address"
+                            }
+                        ],
+                        "name": "getLatestStatus",
+                        "outputs": [
+                            {
+                                "components": [
+                                    {
+                                        "internalType": "address",
+                                        "name": "reporter",
+                                        "type": "address"
+                                    },
+                                    {
+                                        "internalType": "uint256",
+                                        "name": "timestamp",
+                                        "type": "uint256"
+                                    },
+                                    {
+                                        "internalType": "bytes32",
+                                        "name": "statusHash",
+                                        "type": "bytes32"
+                                    },
+                                    {
+                                        "internalType": "uint8",
+                                        "name": "severity",
+                                        "type": "uint8"
+                                    },
+                                    {
+                                        "internalType": "string",
+                                        "name": "optionalDetails",
+                                        "type": "string"
+                                    }
+                                ],
+                                "internalType": "struct NodeHealthMonitor.NodeStatus",
+                                "name": "",
+                                "type": "tuple"
+                            }
+                        ],
+                        "stateMutability": "view",
+                        "type": "function"
+                    },
+                    {
+                        "inputs": [
+                            {
+                                "internalType": "uint8",
+                                "name": "severity",
+                                "type": "uint8"
+                            },
+                            {
+                                "internalType": "bytes32",
+                                "name": "statusHash",
+                                "type": "bytes32"
+                            },
+                            {
+                                "internalType": "string",
+                                "name": "optionalDetails",
+                                "type": "string"
+                            }
+                        ],
+                        "name": "reportStatus",
+                        "outputs": [],
+                        "stateMutability": "nonpayable",
+                        "type": "function"
+                    },
+                    {
+                        "inputs": [
+                            {
+                                "internalType": "address",
+                                "name": "",
+                                "type": "address"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "",
+                                "type": "uint256"
+                            }
+                        ],
+                        "name": "statusReports",
+                        "outputs": [
+                            {
+                                "internalType": "address",
+                                "name": "reporter",
+                                "type": "address"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "timestamp",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "bytes32",
+                                "name": "statusHash",
+                                "type": "bytes32"
+                            },
+                            {
+                                "internalType": "uint8",
+                                "name": "severity",
+                                "type": "uint8"
+                            },
+                            {
+                                "internalType": "string",
+                                "name": "optionalDetails",
+                                "type": "string"
+                            }
+                        ],
+                        "stateMutability": "view",
+                        "type": "function"
+                    }
+                ]
+            }
+        }
+    }
+}
