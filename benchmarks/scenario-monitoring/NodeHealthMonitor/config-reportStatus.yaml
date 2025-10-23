@@ -6,6 +6,7 @@ simpleArgs: &simple-args
       "Problema Detectado",
     ]
   numberOfAccounts: &number-of-accounts 5
+  txNumber: &tx-number 10
   timeOfTest: &time-of-test 20
 
 test:
@@ -18,11 +19,11 @@ test:
     - label: reportStatus
       description: >-
         Envio massivo de status para monitorar throughput.
-      txDuration: *time-of-test
+      txNumber: *tx-number
       rateControl:
         type: fixed-rate
         opts:
-          tps: 200
+          tps: 1
       workload:
         module: benchmarks/scenario-monitoring/NodeHealthMonitor/reportStatus.js
         arguments: *simple-args

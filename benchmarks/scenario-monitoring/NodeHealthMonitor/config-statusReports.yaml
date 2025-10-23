@@ -2,6 +2,7 @@ simpleArgs: &simple-args
   statusReports: ["0x7a5583095f747317be8a48d9a944aa0a9508f1d2", "0"]
   numberOfAccounts: &number-of-accounts 5
   timeOfTest: &time-of-test 20
+  txNumber: &tx-number 10
 
 test:
   name: NodeHealthMonitor Load Test
@@ -13,11 +14,11 @@ test:
     - label: statusReports
       description: >-
         Envio massivo de status para monitorar throughput.
-      txDuration: *time-of-test
+      txNumber: *tx-number
       rateControl:
         type: fixed-rate
         opts:
-          tps: 200
+          tps: 1
       workload:
         module: benchmarks/scenario-monitoring/NodeHealthMonitor/statusReports.js
         arguments: *simple-args

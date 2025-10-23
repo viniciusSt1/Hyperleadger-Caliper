@@ -5,13 +5,12 @@
     },
     "ethereum": {
         "url": "ws://127.0.0.1:8646",
-        "fromAddress": "0x7a5583095f747317be8a48d9a944aa0a9508f1d2",
-        "fromAddressPrivateKey": "0x17d03fd2be867379ac6cfa30d1d9fb4662fe52bc833f7bc49c24400ffe2ea6a8",
-        "toAddress": "0x8a185f1380b8d681c394c15b2d26e9420d4bc05b",
+        "fromAddress": "0xfe3b557e8fb62b89f4916b721be55ceb828dbd73",
+        "fromAddressPrivateKey": "0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63",
         "transactionConfirmationBlocks": 1,
         "contracts": {
             "NodeHealthMonitor": {
-                "address": "0xFbdE8b3Bc96779503fDeC133f011e2354641F3c6",
+                "address": "0x686AfD6e502A81D2e77f2e038A23C0dEf4949A20",
                 "estimateGas": true,
                 "gas": {
                     "reportStatus": 1000000000,
