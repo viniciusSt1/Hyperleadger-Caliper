@@ -139,6 +139,7 @@ observer:
 ## Execução de Testes
 ### Execução Única
 
+### NodeHealthMonitor
 ```
 npx caliper launch manager \
   --caliper-workspace ./ \
@@ -147,6 +148,27 @@ npx caliper launch manager \
   --caliper-bind-sut besu:latest \
   --caliper-flow-skip-install
 ``` 
+
+### Simple
+```
+npx caliper launch manager \
+  --caliper-workspace ./ \
+  --caliper-benchconfig benchmarks/scenario-monitoring/ERC721/config.yaml \
+  --caliper-networkconfig ./networks/besu/networkconfig.json \
+  --caliper-bind-sut besu:latest \
+  --caliper-flow-skip-install
+``` 
+
+### ERC721 (fazer deploy do contrato correto)
+```
+npx caliper launch manager \
+  --caliper-workspace ./ \
+  --caliper-benchconfig benchmarks/scenario-monitoring/Simple/config.yaml \
+  --caliper-networkconfig ./networks/besu/networkconfig.json \
+  --caliper-bind-sut besu:latest \
+  --caliper-flow-skip-install
+``` 
+
 ## Execução Automatizada (Scripts)
 ### 1. Executar uma bateria completa de testes
 ```

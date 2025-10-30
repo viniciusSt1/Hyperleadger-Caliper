@@ -35,12 +35,12 @@ monitors:
         interval: 5
         cpuUsageNormalization: true # Normalizes CPU usage values to a 0-100% range
         containers:
-          - /node1
-          - /node2
-          - /node3
-          - /node4
-          - /node5
-          - /node6
+          - /node-besu1
+          - /node-besu2
+          - /node-besu3
+          - /node-besu4
+          - /node-besu5
+          - /node-besu6
         stats:
           memory:
             max: true
